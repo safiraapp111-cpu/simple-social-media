@@ -10,7 +10,7 @@ chown -R www-data:www-data bootstrap storage || true
 chmod -R ug+rwx bootstrap storage || true
 
 npm install --legacy-peer-deps --no-audit --progress=false
-npm run build
+npm run dev
 composer install --optimize-autoloader
 cp .env.example .env || true
 php artisan key:generate
